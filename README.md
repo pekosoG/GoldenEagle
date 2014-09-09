@@ -33,14 +33,14 @@ Toda accion será registrada en un historial, accesible solamente por el usuario
 
 **Division**
  Campo | Tipo de Dato
- --------------------------
+ -----------|---------------
  ID |  int
  nombre | varchar(35)
  cve | varchar(6)
  
  **Zona**
  Campo | Tipo de Dato
- --------------------------
+ -----------|---------------
  ID |  int
  nombre | varchar(35)
  cve | varchar(6)
@@ -48,7 +48,7 @@ Toda accion será registrada en un historial, accesible solamente por el usuario
  
  **Agencia**
  Campo | Tipo de Dato
- --------------------------
+ -----------|---------------
  ID |  int
  nombre | varchar(35)
  cve | varchar(6)
@@ -56,7 +56,7 @@ Toda accion será registrada en un historial, accesible solamente por el usuario
  
  **Usuarios**
  Campo | Tipo de Dato
- --------------------------
+ -----------|---------------
  username | varchar(15)
  pass | varchar(50)  //Estará en SHA1
  nivel | int
@@ -64,7 +64,7 @@ Toda accion será registrada en un historial, accesible solamente por el usuario
  
  **Archivos**
  Campo | Tipo de Dato
- --------------------------
+ -----------|---------------
  ID | int
  nombre | varchar(150)
  path | varchar(150)
@@ -72,7 +72,7 @@ Toda accion será registrada en un historial, accesible solamente por el usuario
  
  **Historial**
  Campo | Tipo de Dato
- ---------------------------
+ ------------|---------------
  user | varchar(15)
  archivo | int
  fecha | datetime
