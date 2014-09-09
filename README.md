@@ -32,49 +32,48 @@ Toda accion será registrada en un historial, accesible solamente por el usuario
 ###Datos
 
 **Division**
- Campo | Tipo de Dato
- -----------|---------------
- ID |  int
- nombre | varchar(35)
- cve | varchar(6)
- 
+Campo | Tipo de Dato
+-----------|--------------
+ID |  int
+nombre | varchar(35)
+cve | varchar(6)
+
  **Zona**
- Campo | Tipo de Dato
- -----------|---------------
- ID |  int
- nombre | varchar(35)
- cve | varchar(6)
- id_div | int
- 
+Campo | Tipo de Dato
+-----------|---------------
+ID |  int
+nombre | varchar(35)
+cve | varchar(6)
+id_div | int
+
  **Agencia**
- Campo | Tipo de Dato
- -----------|---------------
- ID |  int
- nombre | varchar(35)
- cve | varchar(6)
- id_zona | int
- 
+Campo | Tipo de Dato
+-----------|---------------
+ID |  int
+nombre | varchar(35)
+cve | varchar(6)
+id_zona | int
+
  **Usuarios**
- Campo | Tipo de Dato
- -----------|---------------
- username | varchar(15)
- pass | varchar(50)  //Estará en SHA1
- nivel | int
- last_logged | datetime
+Campo | Tipo de Dato
+-----------|---------------
+username | varchar(15)
+pass | varchar(50)  //Estará en SHA1
+nivel | int
+last_logged | datetime
  
  **Archivos**
- Campo | Tipo de Dato
- -----------|---------------
- ID | int
- nombre | varchar(150)
- path | varchar(150)
- ultima_desc | datetime
+Campo | Tipo de Dato
+-----------|---------------
+ID | int
+nombre | varchar(150)
+path | varchar(150)
+ultima_desc | datetime
  
  **Historial**
- Campo | Tipo de Dato
- ------------|---------------
- user | varchar(15)
- archivo | int
- fecha | datetime
- accion | varchar(20)
-
+Campo | Tipo de Dato
+------------|---------------
+user | varchar(15)
+archivo | int
+fecha | datetime
+accion | varchar(20)
