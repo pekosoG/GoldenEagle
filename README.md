@@ -32,13 +32,15 @@ Toda accion será registrada en un historial, accesible solamente por el usuario
 ###Datos
 
 **Division**
+
 Campo | Tipo de Dato
 -----------|--------------
 ID |  int
 nombre | varchar(35)
 cve | varchar(6)
 
- **Zona**
+**Zona**
+ 
 Campo | Tipo de Dato
 -----------|---------------
 ID |  int
@@ -46,7 +48,8 @@ nombre | varchar(35)
 cve | varchar(6)
 id_div | int
 
- **Agencia**
+**Agencia**
+ 
 Campo | Tipo de Dato
 -----------|---------------
 ID |  int
@@ -54,7 +57,8 @@ nombre | varchar(35)
 cve | varchar(6)
 id_zona | int
 
- **Usuarios**
+**Usuarios**
+ 
 Campo | Tipo de Dato
 -----------|---------------
 username | varchar(15)
@@ -62,7 +66,8 @@ pass | varchar(50)  //Estará en SHA1
 nivel | int
 last_logged | datetime
  
- **Archivos**
+**Archivos**
+ 
 Campo | Tipo de Dato
 -----------|---------------
 ID | int
@@ -70,7 +75,8 @@ nombre | varchar(150)
 path | varchar(150)
 ultima_desc | datetime
  
- **Historial**
+**Historial**
+ 
 Campo | Tipo de Dato
 ------------|---------------
 user | varchar(15)
