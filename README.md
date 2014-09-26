@@ -61,6 +61,7 @@ id_zona | int
  
 Campo | Tipo de Dato
 -----------|---------------
+id | int
 username | varchar(15)
 pass | varchar(50)  //Estará en SHA1
 nivel | int
@@ -83,3 +84,13 @@ user | varchar(15)
 archivo | int
 fecha | datetime
 accion | varchar(20)
+
+**Pedido**
+
+Campo | Tipo de Dato
+-----------|-----------
+user_id | int
+agencia_id | int
+cantidad | int
+fecha | date
+status | int (0=pendiente, 1=procesando, 2=lista)
