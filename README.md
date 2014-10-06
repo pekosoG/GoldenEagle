@@ -23,6 +23,7 @@ Accion | Descripcion | Nivel Minimo
 -----------|------------------|------------------
 Peticion | El usuario podrá solicitar la generación de archivos de la zona geografica que desee. El sistema avisará por medio de correo electronico cuando la solicitud esté lista. (AJAX) | 5
 Busqueda | El usuario, por medio de un **filtro**, buscará archivos de la zona geografica que desee. (AJAX) | 1
+ABC Usuarios | Se podrán registrar, editar y eliminar usuarios| 5 
 Descarga | El usuario descagará el archivo seleccionado | 1
 Compartir | El usuario compartirá una URL en la que se podrá descargar el archivo seleccionado. Esta URL expirará en un tiempo determinado | 1
 Revisar Historial | El usuario podrá revisar su historial de acciones | 1
@@ -61,11 +62,15 @@ id_zona | int
  
 Campo | Tipo de Dato
 -----------|---------------
-id | int
+id | int //Será AutoIncrementable
 username | varchar(15)
 pass | varchar(50)  //Estará en SHA1
-nivel | int
+nombres | varchar(50)
+apellidos | varchar(50)
+mail | varchar(50)
+nivel | int 
 last_logged | datetime
+status | int (1 = activo , 0 = Muerto) //1 por default
  
 **Archivos**
  
