@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>Login - GoldenEagle</title>
+		<meta name="description" content="">
+		<meta name="author" content="Pekas">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/login.css">
+		<link rel="stylesheet" href="../font-awesome-4.2.0/css/font-awesome.min.css">
+		<script src="../js/losScripts.js"></script>
+		<script src="../js/util.js"></script>
+		<script src="../js/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<h1>Golden Eagle</h1>
+		</header>
+		<section>
+			<article id="loginContainer">
+				<div class="whiteText miniHeader">
+					<i class="fa fa-lock"> </i>
+					<label>Login</label>
+				</div>
+				<div class='whiteText'>
+					<label>Ingresa con tu cuenta de GoldenEagle!</label>
+				</div>
+				<div class="loginInput">	
+					<label for="userName"><i class="fa fa-user" title="Usuario"></i></label>
+					<input tabindex="1" type="text" id="userName" name="userName" placeholder="Usuario"/>
+					<i id="warningUser" class="fa fa-warning" title="Usuario Requerido" > </i>
+				</div>
+				<div class="loginInput">
+					<label for="paswd"><i class="fa fa-key" title="Contraseña"></i></label>
+					<input tabindex="2" type="password" id="paswd" name="paswd" placeholder="Contraseña"/>
+					<i id="warningPass" class="fa fa-warning" title="Password Requerido" > </i>
+				</div>
+				<div id="loginPassForgot">
+					<a href="passRestore.html" target="_top">¿Olvidaste tu Contraseña?</a>
+				</div>
+				<div id="btnLogin">
+					<button tabindex="3" onclick="logearse();">
+						<i class="fa fa-unlock fa-2x" title="Iniciar Sesion"></i>
+						Iniciar Sesion
+					</button>
+				</div>
+			</article>
+		</section>
+	</body>
+</html>

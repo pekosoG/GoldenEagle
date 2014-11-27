@@ -5,7 +5,7 @@
  */
 class modLogin{
 	
-	private $mins_expire=5;
+	private $MINS_EXPIRE=5;
 	private $modSQL;
 	
 	function __construct(){
@@ -21,7 +21,7 @@ class modLogin{
 	 */
 	function login($user,$pass){
 		$ok=false;
-		$query="SELECT pass,nivel FROM usuarios WHERE user='".$user."'";
+		$query="SELECT pass,nivel FROM usuarios WHERE username='".$user."'";
 		$res=$this->modSQL->ejecutaConsulta($query);
 		if($res===NULL || $res===FALSE){
 			echo 'NOOOOOPE LOGIN';
@@ -37,13 +37,13 @@ class modLogin{
 						session_unset();
 						$this->logout();
 					}
-					
+					session_start();
 					$_SESSION['user']=$_POST['user'];
 					$_SESSION['nivel']=$nivel;
 					$_SESSION['start'] = time();
 					$_SESSION['expire'] = $_SESSION['start'] + ($this->MINS_EXPIRE * 60);
-
-					$this->modSQL->ejecutaQuery("UPDATE usuarios SET logged=now() WHERE user='".$user."'");
+                    
+					$this->modSQL->ejecutaQuery("UPDATE usuarios SET last_login=now() WHERE username='".$user."'");
 				}
 			}
 		}
@@ -63,12 +63,13 @@ class modLogin{
 				$_SESSION['expire'] = $_SESSION['start'] + ($this->MINS_EXPIRE * 60);
             	$ok=true;
         	}else{
-        		echo "Error: Sesion Expirada";
+        		//echo "Error: Sesion Expirada";
 				$this->logout();
 			}
 		}
-		else
-			var_dump($_SESSION);
+		else{
+			$this->logout();
+		}
 		return $ok;
 	}
 	
@@ -79,7 +80,15 @@ class modLogin{
 		session_unset();
 		session_destroy();
 		setcookie(session_name(),'',time()-3600);
-		//header("Location: ../RutasIusa/index.html");
+		header("Location: ../index.php");
+	}
+	
+	function tmpSession($key,$user){
+		session_start();
+		$_SESSION['key']=$key;
+		$_SESSION['userid']=$user;
+		$_SESSION['start'] = time();
+		$_SESSION['expire'] = $_SESSION['start'] + ($this->MINS_EXPIRE * 60);
 	}
 }
 

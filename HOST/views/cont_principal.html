@@ -1,0 +1,25 @@
+				<article class='centrado principal'>
+				<div id="division" class="centrado menuSeleccion paddin-abajo">
+					<label class="centrado">Division</label>
+					<select id="selDivision" class="centrado" onchange="getAjaxJQ('zonas',this.value,'zonas')">
+						{Divisiones}
+					</select>
+				</div>
+				<div id="zonas" class="centrado menuSeleccion paddin-abajo" >
+					<label class="centrado">Zona</label>
+					<select id="selZona" class="centrado" onchange="getAjaxJQ('cacs',this.value,'agencias')">
+					</select>
+				</div>
+				<div id="agencias" class="centrado menuSeleccion paddin-abajo" >
+					<label class="centrado">Area</label>
+					<select id="selArea" class="centrado">
+					</select>
+				</div>
+				<div class="centrado paddin-abajo" id="botonBusca">
+					<button class="centrado" onclick="getListado()"><i class="fa fa-search"> </i>Buscar</button>
+				</div>
+				<span class="paddin-abajo"> </span>
+				</article>
+				<article class="centrado" id="contDescargas">
+				</article>
+				<article class="centrado" id="contDescargas"></article>

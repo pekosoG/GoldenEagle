@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>Reset Password - GoldenEagle</title>
+		<meta name="description" content="">
+		<meta name="author" content="Pekas">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/login.css">
+		<link rel="stylesheet" href="../font-awesome-4.2.0/css/font-awesome.min.css">
+		<script src="../js/losScripts.js"></script>
+		<script src="../js/util.js"></script>
+		<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/ui-darkness/jquery-ui.css" rel="stylesheet">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<h1>Golden Eagle</h1>
+		</header>
+		<section>
+			<div id="exclamacion" class="centrado menuSeleccion">
+				<label><i class="fa fa-rocket 5x"></i></label>
+			</div>
+			<div id="dialogo" class="dialogo confirm.dead" title="Reset Password">
+				<p>
+					Porfavor, ingresa el Nuevo Password
+					<input class="margen-arriba" type="password" id="usrPass" placeholder="Password"/>
+					<input class="margen-arriba margen-abajo" type="password" id="usrPass2" placeholder="Confirmar Password" onfocusout="checaPass()"/>
+				</p>
+			</div>
+		</section>
+		<script type="text/javascript">
+			$('#dialogo').dialog({
+					modal:true,
+					resizable:false,
+					dialogClass:'warning-dialog',
+					buttons:{
+						"Listo":function(){
+							if(checaPass()){
+								var elPass=document.getElementById('usrPass').value;
+								$.ajax({
+									type:'GET',
+									data:"recoverpass=&newpass="+base64encode(elPass),
+									url: 'PassRecovery.php',
+									dataType:'text',
+									success:function(Resp){
+										//alert('+++'+Resp+'***');
+										if(Resp==='ok'){
+											$(location).attr('href','index.php');
+											//document.write('');
+											//document.write(Resp);
+											//$(this).dialog("close");
+											return;
+										}
+										else{
+											$('#usrPass').val('');
+											$('#usrPass2').val('');
+											document.getElementById('usrPass').focus();
+										}
+									}
+								});
+							}
+						}
+					}
+				});
+			//}
+		//);
+		</script>
+	</body>
+</html>

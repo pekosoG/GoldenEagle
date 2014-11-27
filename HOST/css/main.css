@@ -1,0 +1,339 @@
+.centrado{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.borde-5em{
+	border-radius:.5em;
+}
+
+.sombra{
+	box-shadow:1px 1px 10px #63010A;
+}
+
+.paddin-abajo{
+	padding-bottom:1em;
+}
+
+.margen-abajo{
+	margin-bottom:1em;
+}
+
+.margen-arriba{
+	margin-top:2em;
+}
+
+body{
+	background:#A2000F;
+}
+
+header, footer{
+	width:100%;
+	display:block;
+	clear:both;
+	color:#FFFFFF;
+	text-align:center;	
+}
+
+header h1{
+	font-size: -webkit-xxx-large;
+	text-shadow: 4px 3px 0px #75000B, 9px 8px 0px rgba(0, 0, 0, 0.15);	
+}
+
+a{
+	text-decoration:none;
+	color:#FF7615;
+}
+
+a:hover{
+	text-decoration:underline;
+	color:#FF7615;
+}
+
+nav{
+	width:90%;
+	height:3em;
+	background:#C80013;
+}
+
+nav ul{
+	padding:0;
+	padding-top:1em;
+	margin:0;
+	list-style: none;
+	display: flex;
+    justify-content: space-between;
+}
+
+nav ul:nth-child(1){
+	padding-left:5%;
+}
+
+nav ul:last-child{
+	margin-right:5%;
+}
+
+nav ul li{
+	float:left;
+	//padding-left:5em;
+}
+
+nav a{
+	color:#FFF;
+	border:1px;
+}
+
+section{
+	width:90%;
+	margin-top:3em;
+	border-radius:.5em;
+	background:#75000B;
+}
+
+article{
+	width:98%;
+}
+
+article.principal{
+	border-bottom: 1px solid #A2000F;
+}	
+
+.menuSeleccion{
+	width:auto;
+}
+
+.menuSeleccion 	label{
+	display:block;
+	color:#FFFFFF;
+	font-size:larger;
+	text-align:center;
+	padding-top:1em;
+}
+
+.menuSeleccion select{
+	margin-top:.5em;
+	border:0 !important;
+	display:block;
+}
+
+#zonas, #agencias{
+	display:none;
+}
+
+#botonBusca{
+	width:4em;
+}
+
+
+button{
+	padding: .6em;
+	border-radius: .3em;
+	border:none;
+	background:#1EAD00;
+	color:#FFFFFF;
+}
+
+button:hover{
+	background:#37E013;
+}
+
+button:active{
+	background:#75000B;	
+}
+
+.btn-red{
+	background:#F50017;
+	color:#FFFFFF;
+}
+
+.btn-red:hover{
+	background:#FE6900;
+}
+
+.btn-red:active{
+	background:#75000B;
+}
+
+.btn-blue{
+	background:#008270;
+}
+
+.btn-blue:hover{
+	background:#0FBAA2;
+}
+
+.btn-blue:active{
+	background:#004C42;
+}
+
+#form-user{
+	display:none;
+}
+
+.ui-widget-content.warning-dialog {
+    background: #C80013;
+    border: 1px solid #FFF;
+    color: #FFF;
+    text-align: center;
+}
+
+.ui-dialog .ui-dialog-buttonpane{
+	background: #C80013;
+	border: none;
+}
+
+.ui-dialog.warning-dialog {
+    left: 0;
+    outline: 0 none;
+    padding: 0 !important;
+    position: absolute;
+    top: 0;
+}
+
+.ui-dialog.warning-dialog .ui-dialog-content {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    overflow: auto;
+    position: relative;
+    padding: 0 !important;
+    margin: 0;
+}
+
+.ui-dialog.warning-dialog .ui-widget-header {
+    background: #A2000F;
+    border: 0;
+    color: #fff;
+    font-weight: normal;
+}
+
+.ui-dialog.warning-dialog .ui-dialog-titlebar {
+    padding: 0.1em .5em;
+    position: relative;
+    font-size: 1em;
+}
+
+table{
+	border-collapse:collapse;
+	padding-top:1em;
+	color:#DEDEDE;
+	border:2px solid;
+	border-color:#A2000F;
+}
+
+table th{
+	background:#A2000F;
+	padding:.5em;
+	color:#FFF;
+	border:	
+}
+
+tbody tr:nth-child(odd) {
+  background: #630009;
+}
+
+tbody tr:nth-child(even) {
+  background: #75000B;
+}
+
+table tbody tr td{
+	padding:.3em;
+}
+
+select{
+	background:brown;
+	color:#FFF;
+	border-radius:.5em;
+	height:2em;
+	font-size:large;
+}
+
+.botones{
+	width: 180px;
+	padding-bottom: 2em;
+}
+
+.botones a{
+	color:#FFF;
+}
+
+.botones button{
+	background:#126500;
+}
+
+.botones button:hover{
+	background:#188700;
+}
+
+.botones button:active{
+	background:#004C42;
+}
+
+.botones button:nth-child(odd){
+	padding-left: .5em;
+}
+
+#contDescargas{
+	display:none;
+}
+
+.descargaCont label.origen{
+	font-size: medium;
+}
+
+.descargaCont label.fileName{
+	padding-top: 0em;
+	padding-bottom: .5em;
+}
+
+#form-user{
+	width:90%;
+}
+
+div{
+	text-align:center;
+}
+
+div input{	
+	background:none;
+	border:none;
+	border-bottom:1px solid #FFF;
+	color:#FFF;
+	font-size:larger;
+}
+
+#form-user div label{
+	width:7em;
+	margin-bottom:.5em;
+}
+
+
+#form-user div button{
+	font-size: large;
+}
+
+.eof{
+	padding-bottom: 3em;
+}
+
+#contDescargas div label i{
+	padding-top:.5em;
+	font-size:xx-large;
+}
+
+#exclamacion{
+	color:#FFF;
+	font-size:x-large;
+	text-shadow: 4px 3px 0px #75000B, 9px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+#mailReponse{
+	display:none;
+}
+
+#pasRecovery, #mailReponse {
+	font-size:x-large;
+}
+
+#pasRecovery button, #mailReponse button{
+	font-size:x-large;
+}

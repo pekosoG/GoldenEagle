@@ -1,0 +1,51 @@
+<article class="centrado principal">
+                	<div id="division" class="centrado menuSeleccion paddin-abajo">
+						<label class="centrado">Division</label>
+						<select id="selDivision" class="centrado" onchange="getAjaxJQ('zonas',this.value,'zonas')">
+						{Divisiones}
+						</select>
+					</div>
+					<div id="zonas" class="centrado menuSeleccion paddin-abajo" >
+						<label class="centrado">Zona</label>
+						<select id="selZona" class="centrado" onchange="getAjaxJQ('cacs',this.value,'agencias')">
+						</select>
+					</div>
+					<div id="agencias" class="centrado menuSeleccion paddin-abajo" >
+						<label class="centrado">Area</label>
+						<select id="selArea" class="centrado" onchange="habilitaBtn(this.value)">
+						</select>
+					</div>
+					<div class="centrado menuSeleccion paddin-abajo">
+						<label for="cantPedido">Cantidad de Paquetes<br><em>(1 Paquete = 1,000 Mapas)</em></label>
+						<input class="centrado margen-arriba" type="number" id="cantPedido" name="cantPedido" min="1"  max="100" step="1" value="1"/>
+					</div>
+					<div class="paddin-abajo">
+						<button disabled id="btnSolicita" onclick="Solicitale()"><i class="fa fa-send"></i>  Solicitar</button>
+					</div>                	
+                </article>
+                <article class="centrado">
+                	<div class="centrado menuSeleccion">
+                		<label>Historial de Pedidos</label>
+                	</div>
+                	<div class="centrado menuSeleccion paddin-abajo">
+                		<select class="centrado" id="tipoHist" onchange="getAjax('listapedido',this.value,'contPedidos')">
+                			<option value="pendiente">Solicitados</option>
+                			<option value="procesando">Procesando</option>
+                			<option value="hecho">Terminados</option>
+                		</select>
+                	</div>
+                	<table class="centrado">
+                		<thead>
+                			<tr>
+                				<th>Fecha</th>
+                				<th>Cantidad</th>
+                				<th>Ubicacion</th>
+                				<th>Status</th>
+                			</tr>
+                		</thead>
+                		<tbody id="contPedidos">
+                			{tblPedidos}
+                		</tbody>
+                	</table>
+                	<br><br>
+                </article>

@@ -6,10 +6,11 @@
 class modSQL{
 	
 	private static $SQL=null;
-	
+    
 	private function checkSQL(){
 		if(self::$SQL===null){
-			self::$SQL= new mysqli('localhost','usrEagle','pswEagle','blackoutsystems_GEDB');
+            require_once('DataBase.php');
+			self::$SQL= new mysqli($host,$user,$pass,$bd);
 			if(self::$SQL->connect_errno)
 				die('Error al conectarse a la BD');			
 		}
@@ -30,10 +31,11 @@ class modSQL{
 	 */
 	public function ejecutaQuery($query){
 		$this->checkSQL();
-		
 		$res=self::$SQL->query($query);
-		if($res===NULL || $res===FALSE)
-			die("Error al ejecutar el Query: $query");
+		if($res===NULL || $res===FALSE){
+			$this->panic();
+			//die();
+		}
 		else
 			return TRUE;	
 	}
@@ -46,10 +48,19 @@ class modSQL{
 		$this->checkSQL();
 		
 		$res=self::$SQL->query($query);
-		if($res===NULL || $res===FALSE)
-			die("Error al ejecutar el Query: $query");
+		if($res===NULL || $res===FALSE){
+			$this->panic();
+			//die();
+		}
 		else
 			return $res;
+	}
+	
+	private function panic(){
+		session_unset();
+		session_destroy();
+		setcookie(session_name(),'',time()-3600);
+		header("Location: ../index.php");
 	}
 }
 

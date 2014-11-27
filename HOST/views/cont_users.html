@@ -1,0 +1,58 @@
+<article class="centrado" id="usrControls">
+	<div><br></div>
+                	<table id="tblUsers" class="centrado margen-abajo">
+                		<thead>
+                			<tr>
+                				<th colspan="2">Nombre</th>
+                				<th>Username</th>
+                				<th>E-Mail</th>
+                				<th>Nivel</th>
+                				<th>Ultimo Login</th>
+                			</tr>
+                		</thead>
+                		<tbody>
+                			{det_tabla}
+                		</tbody>
+                	</table>
+                	<div class="centrado-botones paddin-abajo">
+                		<button onclick="addUser()">Nuevo Usuario</button>
+                	</div>
+                </article>
+                <article class="centrado menuSeleccion" id="form-user">
+                	<div class="centrado menuSeleccion">
+                		<!-- <label for="usrName">User Name</label>-->
+                		<input class="margen-arriba" type="text" tabindex="1" name="usrName" id="usrName" placeholder="User Name"/>
+                	</div>
+                	<div>
+                		<!--<label for="usrPass">Password</label>-->
+                		<input class="margen-arriba" type="password" tabindex="2" name="usrPass" id="usrPass" placeholder="Password"/>
+                		<br>
+                		<!--<label for="usrPass"2>Confirmar Password</label>-->
+                		<input class="margen-arriba" type="password" onfocusout="checaPass()" tabindex="3" name="usrPass2" id="usrPass2" placeholder="Confirmar Password"/>
+                	</div>
+                	<div>
+                		<!--<label for="usrNombre">Nombre(s)</label>-->
+                		<input class="margen-arriba" type="text" tabindex="4" name="usrNombre" id="usrNombre" placeholder='Nombre(s)'/>
+                	</div>
+                	<div>
+                		<!--<label for="usrApps">Apellido(s)</label>-->
+                		<input class="margen-arriba" type="text" tabindex="5" name="usrApps" id="usrApps" placeholder='Apellido(s)'/>
+                	</div>
+                	<div>
+                		<!--<label for="usrMail">E-Mail</label>-->
+                		<input class="margen-arriba" type="text" tabindex="6" name="usrMail" id="usrMail" placeholder='E-Mail'/>
+                	</div>
+                	<div class="centrado menuSeleccion margen-abajo">
+                		<label class="centrado" for="selNivelUser">Nivel de Acceso</label>
+                		<select class="centrado margen-abajo" id="selNivelUsr" tabindex="7">
+                			{selAdm}
+                			{selSpr}
+                			<option value="no-power">Basico</option>
+                		</select>
+                	</div>
+                	<div class="eof">
+                		<button onclick="saveAlta()" tabindex="8"><i class="fa fa-save"></i> Guardar</button>
+                		<button onclick="cancelAlta()"><i class="fa fa-ban"></i> Cancelar</button>
+                		<br>
+                	</div>
+                </article>

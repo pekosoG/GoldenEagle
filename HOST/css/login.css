@@ -1,0 +1,84 @@
+section{
+	width:100%;
+	background:none;
+}
+
+#loginContainer{
+	width:40%;
+	margin-left:auto;
+	margin-right:auto;
+	background:#C80013;
+	border-radius:.5em;
+	box-shadow:5px 5px 10px black;
+}
+
+.whiteText{
+	color:#FFFFFF;
+	text-align:center;	
+}
+
+.miniHeader{
+	padding-top: .5em;
+	padding-bottom: .5em;
+	margin-bottom: .5em;
+	background:#F50017;
+	border-top-right-radius: .5em;
+	border-top-left-radius: .5em;
+	font-size:x-large;
+}
+
+.loginInput{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: .5em;
+	margin-bottom: .5em;	
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border-radius: .3em;
+	background:#75000B;
+	width:70%;	
+	color:#FFFFFF;
+	border-collapse:separate;
+}
+
+.loginInput i{
+	width:10%;
+	text-align: center;
+}
+
+.loginInput input{
+	width:85%;
+	height:100%;
+	background:none;
+	border:none;
+	color:#FFFFFF;
+}
+
+.loginInput input:focus{
+	box-shadow: 0 0 5px 3px #F9152B;
+}
+
+#warningPass, #warningUser{
+	color:#FF6A00;
+	display:none;
+}
+
+#loginPassForgot{
+	padding-right: .8em;
+	display:block;
+	font-size:1em;
+	clear:both;
+	text-align: right;
+}
+
+#loginPassForgot a{
+	margin-left:65%;
+}
+
+#btnLogin{
+	width:30%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: .5em;
+	padding-bottom: .7em;
+}
